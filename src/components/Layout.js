@@ -26,6 +26,7 @@ import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import './Layout.css';
+import Dashboard from './Dashboard.js'
 
 const drawerWidth = 300;
 
@@ -204,14 +205,9 @@ function ResponsiveDrawer(props) {
 
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }, marginTop: '80px' }}
+        sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` }, marginTop: '80px' }}
       >
-        <Typography sx={{ marginBottom: 2 }}>
-          MAIN CONTENT
-        </Typography>
-        <Typography sx={{ marginBottom: 2 }}>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla facilisi etiam dignissim diam...
-        </Typography>
+        <Dashboard/>
       </Box>
     </Box>
   );
