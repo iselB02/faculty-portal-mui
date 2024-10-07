@@ -41,7 +41,7 @@ function Dashboard() {
     <Box sx={{ flexGrow: 1, width:'100%', backgroundColor:''}}>
       <AppBar position="static">
         <Toolbar sx={{ backgroundColor: '#D9D9D9' }}>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, color:'black' }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, color:'black' , fontWeight: 'bold'}}>
             Welcome back, Coco!
           </Typography>
           <Typography sx={{color:'black'}}>
