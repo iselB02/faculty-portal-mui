@@ -3,6 +3,15 @@
     height: 100vh;
 }
 
+#title-classEnroll {
+    color: #4B6280;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
 .dropdown {
     display: flex;
     flex-direction: row;

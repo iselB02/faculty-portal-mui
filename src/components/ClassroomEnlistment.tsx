@@ -54,7 +54,7 @@ export default function ClassroomEnlistment() {
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, color: 'black' }}
+            sx={{ flexGrow: 1, color: 'black' }} id='title-classEnroll'
           >
             Class Enrollment List
           </Typography>
