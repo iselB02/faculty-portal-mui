@@ -1,0 +1,51 @@
+{
+    "user_info": {
+        "user_id": "INT (PK)",
+        "password": "VARCHAR",
+        "user_role": "VARCHAR",
+        "lastlogin": "DATE"
+    },
+    "faculty_info": {
+        "faculty_id": "INT (PK)",
+        "first_name": "VARCHAR",
+        "middle_name": "VARCHAR",
+        "last_name": "VARCHAR",
+        "school_email": "VARCHAR",
+        "position": "VARCHAR",
+        "college_id": "INT (FK)"
+    },
+    "college_info": {
+        "college_id": "INT (PK)",
+        "college_name": "VARCHAR",
+        "college_logo": "BLOB",
+        "dean_name": "VARCHAR"
+    },
+    "course_info": {
+        "course_id": "INT (PK)",
+        "course_name": "VARCHAR",
+        "description": "VARCHAR",
+        "college_id": "INT (FK)"
+    },
+    "subject_info": {
+        "subject_id": "INT (PK)",
+        "subject_name": "VARCHAR",
+        "credits": "INT",
+        "subject_requirement": "INT",
+        "course_id": "INT (FK)"
+    },
+    "curriculum_info": {
+        "curriculum_id": "INT (PK)",
+        "course_id": "INT",
+        "curriculum_file": "BLOB",
+        "year": "DATE",
+        "semester": "INT",
+        "subject_id": "INT (FK)"
+    },
+    "class_info": {
+        "class_id": "INT (PK)",
+        "course_id": "INT (FK)",
+        "room_id": "INT",
+        "faculty_id": "INT (FK)",
+        "schedule": "DATETIME"
+    }
+}
