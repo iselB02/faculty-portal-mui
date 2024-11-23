@@ -1,0 +1,137 @@
+*{
+  margin: 0;
+}
+
+.dashboard-container {
+  /* background-color: aqua; */
+  height: 100vh;
+}
+
+.main-content {
+  /* background-color: rebeccapurple; */
+  padding-bottom: 20px;
+}
+
+.contents {
+  /* background-color: rgba(134, 10, 10, 0.511); */
+  height: 420px;
+}
+
+.cover-photo{
+  width: 100%;
+  height: 250px;
+  /* background-color: aqua; */
+  background-image: url("/public/images/cover-photo.jpg");
+}
+
+.faculty-card {
+  position: relative;
+  bottom: 60px;
+  display: flex;
+  background-color: transparent;
+  padding-left: 30px;
+}
+
+.faculty-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 5px solid white;
+  margin-right: 20px;
+}
+
+.faculty-details {
+  padding-top: 80px;
+  width: 100%;
+  /* background-color: aqua; */
+
+}
+
+.other-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 20px;
+  /* background-color: aqua; */
+}
+
+#name {
+  color: #4B6280;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#position, #college, #department {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+#status {
+  color: #4B6280;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+#about-title {
+  background-color: #4B6280;
+  border-radius: 20px 20px 0px 0px;
+  padding: 10px;
+  color: white;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #F5F7F8;
+  padding: 20px;
+}
+
+.about-info p {
+  display: flex;
+  padding: 5px;
+  /* height: 30px; */
+  width: 70%;
+  gap: 10px;
+  border-radius: 10px;
+  background: #ccd9eb;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.03);
+}
+
+.about-info strong {
+  color: #000;
+  text-align: right;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.about-info p p, .about-info li {
+  color: #4B6280;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  /* background-color: red; */
+  padding: 0;
+}

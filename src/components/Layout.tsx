@@ -1,6 +1,5 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-// import { Routes, Route, Link } from 'react-router-dom';
 import { Outlet, Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -28,6 +27,8 @@ import BookIcon from '@mui/icons-material/Book';
 import ChecklistIcon from '@mui/icons-material/Checklist';
 import Person2Icon from '@mui/icons-material/Person2';
 import CalculateIcon from '@mui/icons-material/Calculate';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import './Layout.css';
 
 const drawerWidth = 300;
@@ -46,6 +47,8 @@ function ResponsiveDrawer(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [drawerLocked, setDrawerLocked] = React.useState(false); // State for locking the drawer
   const [anchorEl, setAnchorEl] = React.useState(null); // State for dropdown menu
+  const [selectedPath, setSelectedPath] = useState('/dashboard'); // Track selected path
+  const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -61,6 +64,11 @@ function ResponsiveDrawer(props) {
 
   const handleMenuClose = () => {
     setAnchorEl(null); // Close dropdown menu
+  };
+
+  const handleProfileClick = () => {
+    setAnchorEl(null); // Close the dropdown menu
+    navigate('/profile'); // Navigate to the Faculty Dashboard
   };
 
   const drawer = (
@@ -90,10 +98,35 @@ function ResponsiveDrawer(props) {
           { text: 'Class Attendance', path: '/attendance' },
           { text: 'Grading System & Management', path: '/grading-system' },
         ].map(({ text, path }) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton component={Link} to={path}>
-              <ListItemIcon>{iconMap[text]}</ListItemIcon>
-              <ListItemText primary={text} />
+          <ListItem
+            key={text}
+            disablePadding
+            sx={{
+              boxShadow: selectedPath === path ? 'rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px' : 'none', // Add shadow when selected
+              transition: 'box-shadow 0.3s ease', // Smooth transition for the shadow effect
+              '&:hover': {
+                boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)', // Add shadow on hover
+              },
+            }}
+          >
+            <ListItemButton
+              component={Link}
+              to={path}
+              onClick={() => setSelectedPath(path)} // Update the selected path
+            >
+              <ListItemIcon
+                sx={{
+                  color: 'white', // Keep icon color white
+                }}
+              >
+                {iconMap[text]}
+              </ListItemIcon>
+              <ListItemText
+                primary={text}
+                sx={{
+                  color: 'white', // Keep text color white
+                }}
+              />
             </ListItemButton>
           </ListItem>
         ))}
@@ -109,7 +142,7 @@ function ResponsiveDrawer(props) {
       sx={{
         display: 'flex',
         height: '100vh', // Full height
-        overflow: 'auto', // Remove default scrollbar
+        overflow: 'auto',
       }}
     >
       <CssBaseline />
@@ -165,7 +198,7 @@ function ResponsiveDrawer(props) {
             open={Boolean(anchorEl)}
             onClose={handleMenuClose}
           >
-            <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+            <MenuItem onClick={handleProfileClick}>Profile</MenuItem>
             <MenuItem onClick={handleMenuClose}>Settings</MenuItem>
             <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
           </Menu>
@@ -211,7 +244,6 @@ function ResponsiveDrawer(props) {
         }}
       >
         <Toolbar />
-        {/* Render child routes here */}
         <Outlet />
       </Box>
     </Box>

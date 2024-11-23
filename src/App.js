@@ -7,6 +7,7 @@ import CourseInformation from './components/CourseInformation.tsx';
 import AssessmentEvaluation from './components/Assessment.tsx';
 import ClassAttendance from './components/Attendance.tsx';
 import GradingSystem from './components/GradingSystem.tsx';
+import Profile from './components/Profile.tsx';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="assessment" element={<AssessmentEvaluation />} />
           <Route path="attendance" element={<ClassAttendance />} />
           <Route path="grading-system" element={<GradingSystem />} />
+          <Route path="profile" element={<Profile />} />
         </Route>
       </Routes>
     </Router>
