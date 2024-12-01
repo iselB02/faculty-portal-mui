@@ -1,0 +1,54 @@
+.classEnrollment-dropdown {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    /* background-color: aqua; */
+}
+
+.act-assesstment {
+    display: flex;
+    /* background-color: aqua; */
+    width: 100%;
+    height: auto;
+    justify-content: space-between
+}
+
+.act, .assest {
+    display: flex;
+    flex-direction: column;
+    /* background-color: blue; */
+    padding: 20px;
+    width: 45%;
+    align-items: center;
+    gap: 10px;
+}
+
+.act-item {
+    background-color: #dadde2c4;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.other-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.other-item h3 {
+    color: #4B6280;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 700;
+    /* background-color: bisque; */
+}
+
+.other-item-2 {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}

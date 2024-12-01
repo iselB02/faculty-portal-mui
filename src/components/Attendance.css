@@ -1,0 +1,97 @@
+.class-sched-dropdown {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    /* background-color: aqua; */
+}
+
+.sched-dropdown {
+    display: flex;
+    gap: 30px;
+}
+
+#take-attend{
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    background: #4B6280;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.text1 {
+    color: #4B6280;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.text2 {
+    color: #4B6280;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.btns {
+    display: flex;
+    gap: 10px;
+}
+
+.btns button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #4B6280;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.other-buttons{
+    display: flex;
+    /* background-color: #000000; */
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#marks {
+    display: flex;
+    gap: 30px;
+    justify-content: end;
+    /* background-color: #179639; */
+    width: auto;
+}
+
+.mark {
+    align-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    color: #4B6280;
+    font-family: Inter;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-color: #D9D9D9;
+}

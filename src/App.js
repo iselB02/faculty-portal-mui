@@ -16,7 +16,7 @@ function App() {
         {/* Main Layout Route */}
         <Route path="/" element={<ResponsiveDrawer />}>
           {/* Nested Routes rendered inside the Layout */}
-          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="/" element={<Dashboard />} />
           <Route path="class-enrollment" element={<ClassEnrollment />} />
           <Route path="course-info" element={<CourseInformation />} />
           <Route path="assessment" element={<AssessmentEvaluation />} />

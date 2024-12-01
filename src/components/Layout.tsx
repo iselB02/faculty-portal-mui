@@ -91,7 +91,7 @@ function ResponsiveDrawer(props) {
       <Divider />
       <List>
         {[
-          { text: 'Dashboard', path: '/dashboard' },
+          { text: 'Dashboard', path: '/' },
           { text: 'Class Enrollment List', path: '/class-enrollment' },
           { text: 'Course Information', path: '/course-info' },
           { text: 'Assessment and Evaluation', path: '/assessment' },
